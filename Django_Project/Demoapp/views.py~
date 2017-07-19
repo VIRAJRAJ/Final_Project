@@ -6,7 +6,4 @@ from django.shortcut import render
 
 #create your views here.
 
-def signup_view(request):
-	#business logic.
-	return render(request, 'signup.html')
 

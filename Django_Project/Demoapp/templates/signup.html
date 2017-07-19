@@ -1,4 +1,3 @@
-
 <!Doctype html>
 <html>
 	<head>
@@ -16,36 +15,32 @@
 			<h1>Instagram Clone</h1>
 			<h3>Sign Up</h3>
 			<h4>Today's Date and Time  : {{ today }}</h4>
-
-			<form method="post">
+		        <form method="post">
+		        {% csrf_token %}
 				<div>
 					<label for="username">Username:</label>
-			        </div>
+					<input id="username" type="text" name="username" value="{{ username }}">
+				</div>
 				<div>
 					<label for="name">Name:</label>
-					<input id ="name" type="text"name="name" Value="">
+					<input id="name" type="text" name="name" value="{{ name }}">
 				</div>
 				<div>
 					<label for="email">Email:</label>
-					<input id="email" type="text" name="email" Value="">
+					<input id="email" type="text" name="email" value="{{ email }}">
 				</div>
 				<div>
 					<label for="password">Password:</label>
-					<input id="password" type="Password" name="password value="">
+					<input id="password" type="Password" name="password" value="{{ password }}">
 				</div>
-					<input type="submit" value="Signup">
-				</form>
-
-
-
-
+					<input type="submit" value="Login">
+			</form>
 		</div>
-
-		<!--Javascript files-->
+                <!--Javascript files-->
 		<!--Jquery library-->
 		<script src="js/jquery-3.2.1.js"></script>
 		<!--Bootstrap js Library-->
-		<script src="js/bootstrap.js"></script>
+		<script scr="js/bootstrap.js"></script>
 	</body>
 </html>
 

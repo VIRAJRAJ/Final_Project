@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 	<head>
-		<title>Sign Up</title>
+		<title>Login</title>
 
 		<meta charset="utf-8">
     		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,26 +13,26 @@
 	<body>
 		<div>
 			<h1>Instagram Clone</h1>
-			<h3>Sign Up</h3>
-			<h4>Today's Date and Time  : {{ today }}</h4>
-		        <form method="post">
-		        {% csrf_token %}
+			<h3>Login</h3>
+			<form method="post">
+			{% csrf_token %	}
 				<div>
 					<label for="username">Username:</label>
 					<input id="username" type="text" name="username" value="">
 			        </div>
 				<div>
 					<label for="password">Password:</label>
-					<input id="password" type="Password" name="password" value="">
+					<input id="password" type="Password" name="password value="">
 				</div>
 					<input type="submit" value="Login">
 			</form>
 		</div>
-                <!--Javascript files-->
+
+		<!--Javascript files-->
 		<!--Jquery library-->
 		<script src="js/jquery-3.2.1.js"></script>
 		<!--Bootstrap js Library-->
-		<script scr="js/bootstrap.js"></script>
+		<script src="js/bootstrap.js"></script>
 	</body>
 </html>
 
