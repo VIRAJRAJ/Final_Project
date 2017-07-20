@@ -55,6 +55,6 @@ def login_view(request):
 				     template_namew = 'login_fail.html'
 	                else:
 				 template_name = 'login_fail.html'
-       
-        return render(request,template_name,{'form' : form})
+
+	return render(request,template_name,{'form' : form})
 
