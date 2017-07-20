@@ -1,11 +1,11 @@
 # _*_ coding: utf-8 _*_
-
 from __future__ import unicode_literals
+
 from django.shortcuts import render
 from datetime import datetime
 from Demoapp.forms import SignUpForm,LoginForm
 from django.contrib.auth.hashers import make_password,check_password
-from Demoapp.models import UserModel
+from Demoapp.models import UserModel,SessionToken
 #create your views here.
 def signup_view(request):
 	#business Logic.
@@ -46,6 +46,9 @@ def login_view(request):
 			        #compare password
 				if check_password(password, user.password):
 				     #login successful
+                                     new_token = SessionToken(user=user)
+                                     new_token.create_token()
+                                     new_token.save()
 				     template_name = 'login_success.html'
 				else:
 			             # password  is incorrect.
