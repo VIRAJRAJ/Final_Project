@@ -1,17 +1,92 @@
-<!Doctype html>
+{% load static  %}
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Login</title>
-
 		<meta charset="utf-8">
     		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    		<meta name="viewport" content="width=device-width, initial-scale=1"
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!--Bootstrap-->
-		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 	</head>
-	<body>
-		<div>
+	
+	<body>	
+		<!--header-->
+
+                    <header>
+                           <nav class="navbar navbar-inverse">
+                                  <div class="container">
+			          <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" 
+				  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				  aria-expanded="false">
+                                  <span class="sr-only">Toggle navigation</span>
+
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#">GitHub</a>
+				  </div>
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav">
+                                        <li class="active"><a href="#">Home
+					<span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+				    role="button" aria-haspopup="true" 
+				    aria-expanded="false">Services <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Login</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                     </ul>
+                                        </li>
+                                     </ul>
+                                    <form class="navbar-form navbar-left">
+                                    <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    </form>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#">Login</a></li>
+                                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Setting</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+			          </div>
+			   </nav>		  
+		</header>
+		<!--/header-->
+
+		<div align="center" class="embed-responsive embed-responsive-16by9">
+             <video autoplay loop class="embed-responsive-item">
+             <source src="C:\Users\Vikas\Downloads\Baby Doing Grocery Shopping _ Supermarket Song - YouTube (240p).flv" type="video/mp4">
+             </video>
+        </div>
+
+
+
+
+
+
+
+	        <div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
 			<h1>Instagram Clone</h1>
 			<h3>Login</h3>
 			<form method="post">
@@ -22,17 +97,52 @@
 			        </div>
 				<div>
 					<label for="password">Password:</label>
-					<input id="password" type="Password" name="password value="">
+					<input id="password" type="Password" name="password" value="">
 				</div>
-					<input type="submit" value="Login">
+					<input type="submit" value="Login" class="btn btn-success">
 			</form>
 		</div>
+		</div>
+                <nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-fluid">
+				<!--row3-->
+				<div class="row">
+					<!--Left column-->
+					<div class="col-xs-12 col-sm-8">
+						<ul class="nav navbar-nav">
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#">SUPPORT</a></li>
+							<li><a href="#">BLOG</a></li>
+							<li><a href="#">PRESS</a></li>
+							<li><a href="#">API</a></li>
+							<li><a href="#">JOBS</a></li>
+							<li><a href="#">PRIVACY</a></li>
+							<li><a href="#">TERMS</a></li>
+							<li><a href="#">LANGUAGE</a></li>
+						</ul>
+					</div>
+					<!--./Left column-->	
+			
+					<!--Right column-->
+					<div class="col-xs-12 col-sm-4">
+						<p class="navbar-text">
+							&copy; 2017 INSTAGRAM
+						</p>
+					</div>
+					<!--./Right column-->
+				 </div>
+				 <!--./row3-->
+		        </div>
+		</nav>
+
+
+
 
 		<!--Javascript files-->
 		<!--Jquery library-->
-		<script src="js/jquery-3.2.1.js"></script>
+		<script src={% static "js/jquery-3.2.1.js" %}"></script>
 		<!--Bootstrap js Library-->
-		<script src="js/bootstrap.js"></script>
+		<script src="{% static "js/bootstrap.js" %}"></script>
 	</body>
 </html>
 
