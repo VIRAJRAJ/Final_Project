@@ -2,92 +2,135 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect
-from datetime import datetime
+#from datetime import datetime
 from Demoapp.forms import SignUpForm, LoginForm, PostForm, LikeForm, CommentForm
 from django.contrib.auth.hashers import make_password, check_password
-from Demoapp.models import UserModel, SessionToken, PostFrom, LikeModel, CommentModel
+from Demoapp.models import UserModel, SessionToken, PostModel, LikeModel, CommentModel
 from datetime import timedelta
 from django.utils import timezone
-from mysite.settings import BASE_DIR
+from Django_Project.settings import BASE_DIR
 from imgurpython import ImgurClient
 
-
-
-#create your views here.
-
+# #create your views here.
+# def signup_view(request):
+# 	#business Logic.
+# 	if request.method == 'GET':
+# 		#Display signup form
+#                 #today = datetime.now
+# 		form = SignUpForm()
+# 		template_name = 'signup.html'
+# 	elif request.method == 'POST':
+# 		form = SignUpForm(request.POST)
+#         if form.is_valid():
+# 		   username = form.cleaned_data['username']
+# 		   email = form.cleaned_data['email']
+# 		   name = form.cleaned_data['name']
+# 		   password = form.cleaned_data['password']
+# 		   # insert data to db
+# 		   new_user = UserModel(name=name, password=make_password(password), username=username, email=email)
+# 		   new_user.save()
+# 		   template_name = 'success.html'
+#
+#
+#         return render(request, template_name, {'form':form})
 
 def signup_view(request):
-	#business Logic.
-	if request.method == 'GET':
-		#Display signup form
-                #today = datetime.now
-		form = SignUpForm()
-		template_name = 'signup.html'
-	elif request.method == 'POST':
-		form = SignUpForm(request.POST)
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
         if form.is_valid():
-		   username = form.cleaned_data['username']
-		   email = form.cleaned_data['email']
-		   name = form.cleaned_data['name']
-		   password = form.cleaned_data['password']
-		   # insert data to db
-		   new_user = UserModel(name=name, password=make_password(password), username=username, email=email)
-		   new_user.save()
-		   template_name = 'success.html'
+            username = form.cleaned_data['username']
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            #saving data to DB
+            user = UserModel(name=name, password=make_password(password), email=email, username=username)
+            user.save()
+            return render(request, 'success.html')
+            #return redirect('login/')
+    else:
+        form = SignUpForm()
 
-                   
-        return render(request, template_name, {'form':form})
+
+    return render(request, 'index.html', {'form' : form})
+
+
+
+
+
 
 def login_view(request):
-	if request.method == 'GET':
-		# to do Display login form
-		template_name = 'login.html'
-		form = LoginForm()
-	elif request.method == 'POST':
-		# to do : process form data
+	response_data = {}
+	if request.method == "POST":
 		form = LoginForm(request.POST)
 		if form.is_valid():
-			username = form.cleaned_data['username']
-			password = form.cleaned_data['password']
-			#chech user exist in db or not
+			username = form.cleaned_data.get('username')
+			password = form.cleaned_data.get('password')
 			user = UserModel.objects.filter(username=username).first()
 			if user:
-			        #compare password
 				if check_password(password, user.password):
-				     #login successful
-                                     new_token = SessionToken(user=user)
-                                     new_token.create_token()
-                                     new_token.save()
-					                 response = redirect('feed/')
-					                 response.set_cookie(key='session_token', value=new_token.session_token)
-					                 return response
-			    else:
-				     response_data['message'] = 'Incorrect Password! Please try again!'
+					token = SessionToken(user=user)
+					token.create_token()
+					token.save()
+					response = redirect('feed/')
+					response.set_cookie(key='session_token', value=token.session_token)
+					return response
+				else:
+					response_data['message'] = 'Incorrect Password! Please try again!'
 
-		elif request.method == 'GET':
-				form = LoginForm()
+	elif request.method == 'GET':
+		form = LoginForm()
 
-		response_data['form'] = form
-		return render(request, 'login.html', response_data)
+	response_data['form'] = form
+	return render(request, 'login.html', response_data)
 
-	def feed_view(request):
-		return render(request, 'feed.html')
 
-		# template_name = 'login_success.html'
-		# 		else:
-		# 	             # password  is incorrect.
-		# 		     template_namew = 'login_fail.html'
-	     #            else:
-		# 		 template_name = 'login_fail.html'
+# def login_view(request):
+# 	if request.method == 'GET':
+# 		# to do Display login form
+# 	   template_name = 'login.html'
+# 	   form = LoginForm()
+# 	elif request.method == 'POST':
+# 		# to do : process form data
+# 		form = LoginForm(request.POST)
+# 		if form.is_valid():
+# 			username = form.cleaned_data['username']
+# 			password = form.cleaned_data['password']
+# 			#chech user exist in db or not
+# 			user = UserModel.objects.filter(username=username).first()
+# 			if user:
+# 			    #compare password
+# 				if check_password(password, user.password):
+# 				   #login successful
+#                    new_token = SessionToken(user=user)
+#                    new_token.create_token()
+#                    new_token.save()
+#                    response = redirect('feed/')
+#                    response.set_cookie(key='session_token', value=new_token.session_token)
+#                    return response
+#                    template_name = 'login_success.html'
+# 	            else:
+# 		 	       #password  is incorrect.
+# 		 		   template_namew = 'login_fail.html'
+# 	    else:
+# 		 	template_name = 'login_fail.html'
+#     return render(request, template_name,{'form' : form})
 
-	# return render(request,template_name,{'form' : form})  # For validating the session
-    def check_validation(request):
-	    if request.COOKIES.get('session_token'):
-		   session = SessionToken.objects.filter(session_token=request.COOKIES.get('session_token')).first()
-		   if session:
-			  return session.user
-	    else:
-		    return None
+
+
+
+
+
+def feed_view(request):
+	return render(request, 'feed.html')
+
+
+def check_validation(request):
+	if request.COOKIES.get('session_token'):
+		session = SessionToken.objects.filter(session_token=request.COOKIES.get('session_token')).first()
+		if session:
+			return session.user
+	else:
+		return None
 
 
 def post_view(request):
@@ -118,7 +161,7 @@ def post_view(request):
 		return redirect('/login/')
 
 
-def feed_view(request):
+def feeds_view(request):
 	user = check_validation(request)
 	if user:
 

@@ -32,12 +32,12 @@ class PostModel(models.Model):
 
 
 
-	def like_count(self):
+    def like_count(self):
 		return len(LikeModel.objects.filter(post=self))
 
 
 
-	def comments(self):
+    def comments(self):
 		return CommentModel.objects.filter(post=self).order_by('-created_on')
 
 
