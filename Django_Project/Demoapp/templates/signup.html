@@ -1,46 +1,180 @@
-<!Doctype html>
+{% load static  %}
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Sign Up</title>
-
+		<title>Signup</title>
 		<meta charset="utf-8">
     		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    		<meta name="viewport" content="width=device-width, initial-scale=1"
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!--Bootstrap-->
-		<link href="css/bootstrap.css" rel="stylesheet">
-	</head>
-	<body>
-		<div>
-			<h1>Instagram Clone</h1>
-			<h3>Sign Up</h3>
-			<h4>Today's Date and Time  : {{ today }}</h4>
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+		<link href="{% static "image/C:\Users\Vikas\PycharmProjects\Final_Project\Django_Project\static\images.image" %}" rel="stylesheet">
+	i</head>
+	
+	<body>	
+		<!--header-->
+                    <header>
+                           <nav class="navbar navbar-inverse">
+                                  <div class="container">
+			          <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" 
+				  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				  aria-expanded="false">
+                                  <span class="sr-only">Toggle navigation</span>
+
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#">GitHub</a>
+				  </div>
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav">
+                                        <li class="active"><a href="#">Home
+					<span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+				    role="button" aria-haspopup="true" 
+				    aria-expanded="false">Services <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Login</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                     </ul>
+                                        </li>
+                                     </ul>
+                                    <form class="navbar-form navbar-left">
+                                    <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    </form>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#">Login</a></li>
+                                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                    <li><a href="#">Setting</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+			          </div>
+			   </nav>		  
+	         </header>
+		 <!--/header-->
+
+
+
+
+                <!--footer starts-->
+
+                 <div class="row">
+		 <div class="col-sm-2 col-sm-offset-8">
+               
+                  <h2 id="p2"><p style="font-family:monotype corsiva;font-size:45px;">Instagram Clone</h2></p>
+                         <script>
+                         setInterval(raj1, 05);
+                         setInterval(raj2, 15);
+                         setInterval(raj3, 05);
+                         setInterval(raj4, 10);
+                         setInterval(raj5, 15);
+                         function raj1()
+                         {
+                         document.getElementById("p2").style.color="Green";
+                         }
+                         function raj2()
+                         {
+                         document.getElementById("p2").style.color="Red";
+                         }
+                         function raj3()
+                         {
+                         document.getElementById("p2").style.color="Black";
+                         }
+                         function raj4()
+                         {
+                         document.getElementById("p2").style.color="Yellow";
+                         }
+                         function raj5()
+                         {
+                         document.getElementById("p2").style.color="Silver";
+                         }
+                         </script>
+
+
+			<h1><p style="font-family:Monotype Corsiva; color:#F50057; font-size:30px;">Sign up</p></h1>
 		        <form method="post">
 		        {% csrf_token %}
 				<div>
-					<label for="username">Username:</label>
-					<input id="username" type="text" name="username" value="{{ username }}">
+					<p style="font-family:Monotype Corsiva; color:#3F51B5; font-size:20px;"><label for="username">Username:</label>
+					<input id="username" type="text" name="username" value="{{ username }}"></p>
 				</div>
 				<div>
-					<label for="name">Name:</label>
-					<input id="name" type="text" name="name" value="{{ name }}">
+					<p style="font-family:Monotype Corsiva; color:#303F95; font-size:20px;"><label for="name">Name:</label>
+					<input id="name" type="text" name="name" value="{{ name }}"></p>
 				</div>
 				<div>
-					<label for="email">Email:</label>
-					<input id="email" type="text" name="email" value="{{ email }}">
+					<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"><label for="email">Email:</label>
+					<input id="email" type="text" name="email" value="{{ email }}"></p>
 				</div>
 				<div>
-					<label for="password">Password:</label>
-					<input id="password" type="Password" name="password" value="{{ password }}">
+					<p style="font-family:Monotype Corsiva; color:#7A1EA1; font-size:20px;"><label for="password">Password:</label>
+					<input id="password" maxlength="15" type="Password" name="password" value="{{ password }}"></p>
 				</div>
-					<input type="submit" value="Login">
-			</form>
-		</div>
-                <!--Javascript files-->
-		<!--Jquery library-->
-		<script src="js/jquery-3.2.1.js"></script>
-		<!--Bootstrap js Library-->
-		<script scr="js/bootstrap.js"></script>
-	</body>
-</html>
+				<p style="font-family:Monotype Corsiva; color:#691A99; font-size:21px;"><input type="submit" value="Login"></p>
+				
+			 </form>
 
+
+		 </div>
+		 </div>
+ 
+
+
+                 <nav class="navbar navbar-inverse navbar-fixed-bottom">
+		       <div class="container-fluid">
+				<!--row3-->
+				<div class="row">
+					<!--Left column-->
+					<div class="col-xs-12 col-sm-8">
+						<ul class="nav navbar-nav">
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#">SUPPORT</a></li>
+							<li><a href="#">BLOG</a></li>
+							<li><a href="#">PRESS</a></li>
+							<li><a href="#">API</a></li>
+							<li><a href="#">JOBS</a></li>
+							<li><a href="#">PRIVACY</a></li>
+							<li><a href="#">TERMS</a></li>
+							<li><a href="#">LANGUAGE</a></li>
+						</ul>
+					</div>
+					<!--./Left column-->	
+			
+					<!--Right column-->
+					<div class="col-xs-12 col-sm-4">
+						<p class="navbar-text">
+							&copy; 2017 INSTAGRAM
+						</p>
+					</div>
+					<!--./Right column-->
+			        </div>  
+			        <!--./row3-->
+		        </div>
+		</nav>
+		<!--Javascript files-->
+		<!--Jquery library-->
+		<script src="{% static "js/jquery-3.2.1.js" %}"></script>
+		<!--Bootstrap js Library-->
+		<script src="{% static "js/bootstrap.js" %}"></script>
+	</body>
+</html>                

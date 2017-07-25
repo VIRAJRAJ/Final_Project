@@ -5,7 +5,7 @@
 		<title>Login</title>
 		<meta charset="utf-8">
     		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width">
 		
 		<!--Bootstrap-->
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
@@ -80,13 +80,44 @@
 
 
 
+  
+<div class="container">
+<div class="row">
+    <div class="col-sm-2 vcol-sm-offset-5">
+      <h3>Column 1</h3>
+      <p><div align="center" class="embed-responsive embed-responsive-16by9">
+    <video autoplay loop class="embed-responsive-item">
+        <source src="C:\Users\Vikas\Downloads\Baby Doing Grocery Shopping _ Supermarket Song - YouTube (240p) (1).flv" type="video/mp4">
+    </video></p>
+</div>
+</div>
+    <div class="col-sm-4 col-sm-offset-4">
+      <h3>Column 2</h3>
+
+<div align="center" class="embed-responsive embed-responsive-16by9">
+    <audio autoplay loop class="embed-responsive-item">
+        <source src="C:\Users\Vikas\Music\Mymusic\Music files\PEHLI NAZAR MEIN (G).mp3">
+    </audio>
+
+</div><br />
+    <div class="col-sm-7 col-sm-offset-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+
 
                 <!--footer starts-->
 
 	        <div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
-			<h1>Instagram Clone</h1>
-			<h3>Login</h3>
+	               
+			<h1><p style="font-family:Monotype Corsiva; color:pink; font-size:50px;">Instagram Clone</p></h1>
+	                <h1><p style="font-family:Monotype Corsiva; color:pink; font-size:35px;">Login</p></h1>
+	      
 			<form method="post">
 			{% csrf_token %}
 				<div>
