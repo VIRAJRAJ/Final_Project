@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.db import models
 # Create your models here.
 class UserModel(models.Model):
     email = models.EmailField()
@@ -11,3 +11,13 @@ class UserModel(models.Model):
     password = models.CharField(max_length=40)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+
+
+class Song(models.Model):
+    title = models.CharField(max_length=100)
+    songfile = models.FileField()
+    duration = models.FloatField()
+    isPlaying = False
+
+    def __str__(self):
+        return self.title
