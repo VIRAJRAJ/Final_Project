@@ -11,7 +11,7 @@
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 	</head>
 	
-	<body background="C:\Users\Vikas\Pictures\Pictures\1473561764146.jpg">	
+	<body>	
 		<!--header-->
 
 
@@ -81,27 +81,24 @@
 
 
   
-<div class="container">
-<div class="row">
-    <div class="col-sm-4 vcol-sm-offset-4">
-      <h3>Column 1</h3>
-      <p><div align="center" class="embed-responsive embed-responsive-16by9">
-    <video autoplay loop class="embed-responsive-item">
-	    <source src="{% static "videos/Baby Doing Grocery Shopping" %}" type="video/mp4">
-    </video></p>
-</div>
-</div>
-    <div class="col-sm-4 col-sm-offset-4">
-      <h3>Column 2</h3>
+		<div class="container-fluid">
+		<div class="row">
+		<div class="col-sm-4 vcol-sm-offset-4">
+      		<h3>Column 1</h3>
+      		<div class="panel-body" class="embed-responsive embed-responsive-16by9"> 
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/YcYr0Pl_grg?ecver=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+		</div>
+		</div>
+		<div class="row">
+    		<div class="col-sm-4 col-sm-offset-4">
+      		<h3>Column 2</h3>
+		<div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bIB8EWqCPrQ?ecver=1" frameborder="0" allowfullscreen></iframe>
+     		</div>
+   		</div>
+		</div>
 
-<div align="center" class="embed-responsive embed-responsive-16by9">
-    <audio autoplay loop class="embed-responsive-item">
-	    <source src="{% static "audios/Narazgi" %}">
-    </audio>
-     
-    </div>
-  </div>
-</div>
 
 
 
@@ -110,7 +107,7 @@
 	        <div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
 	               
-			<h1><p style="font-family:Monotype Corsiva; color:pink; font-size:50px;">Instagram Clone</p></h1>
+			<center>	<h1><p style="font-family:Monotype Corsiva; color:pink; font-size:50px;">Instagram Clone</p></h1>
 	                <h1><p style="font-family:Monotype Corsiva; color:pink; font-size:35px;">Login</p></h1>
 	      
 			<form method="post">
@@ -124,6 +121,8 @@
 					<input id="password" type="Password" name="password" value="">
 				</div>
 					<input type="submit" value="Login" class="btn btn-success">
+                                        <div ><h3>Already a user?</h3><a href="login/">Login</a></div>
+		                        </b> </center>
 			</form>
 		</div>
 		</div>
