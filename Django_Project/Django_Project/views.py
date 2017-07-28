@@ -1,26 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render,redirect
-#from datetime import datetime
-from Demoapp.forms import SignUpForm, LoginForm, PostForm, LikeForm,CommentForm
-from Demoapp1.forms import SignUpForm, LoginForm, PostForm, LikeForm,CommentForm
-from Demoapp.models import UserModel,SessionToken, PostModel, LikeModel, CommentModel
-from Demoapp1.models import UserModel, SessionToken, PostModel, LikeModel, CommentModel
+from datetime import datetime
+from forms import SignUpForm, LoginForm, PostForm, LikeForm, CommentForm
+from models import UserModel, SessionToken, PostModel, LikeModel, CommentModel
 from django.http import HttpResponse
 from Django_Project.settings import BASE_DIR
 from datetime import timedelta
 from django.utils import timezone
 from imgurpython import ImgurClient
 from django.contrib.auth.hashers import make_password, check_password
-
-# from paralleldots.config import get_api_key
-# import requests
-# import json
-
-
-# client = ImgurClient(client_id, client_secret)
-# client_id = 'da1a748cadc3b7d'
-# client_secret = '7c31c1e264190f81000fa3324b560533e9e1949e'
+client_id = '50b7d2b49057d21'
+client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
 
 
 
@@ -111,7 +102,7 @@ def post_view(request):
             caption = form.cleaned_data.get('caption')
             post = PostModel(user=user, image=image, caption=caption)
             post.save()
-            client = ImgurClient('da1a748cadc3b7d', '7c31c1e264190f81000fa3324b560533e9e1949e')
+            client = ImgurClient('50b7d2b49057d21', 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2')
             path = str(BASE_DIR + "\\" +  post.image.url)
             post.image_url = client.upload_from_path(path,anon=True)['link']
             post.save()

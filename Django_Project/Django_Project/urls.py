@@ -25,6 +25,6 @@ urlpatterns = [
    url(r'^signup/', signup_view),
    url(r'^post/', post_view),
    url(r'^feed/', feed_view),
-   url(r'^like',like_view),
-   url(r'^comment',comment_view),
+   url(r'^like', like_view),
+   url(r'^comment', comment_view),
 ]
