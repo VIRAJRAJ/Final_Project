@@ -1,5 +1,5 @@
 from django import forms
-from models import UserModel, PostModel, CommentModel, LikeModel
+from models import UserModel, SessionToken, PostModel, CommentModel, LikeModel
 
 class SignUpForm(forms.ModelForm):
 	class Meta:
