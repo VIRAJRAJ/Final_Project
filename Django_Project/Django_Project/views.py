@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 from django.shortcuts import render,redirect
 from datetime import datetime
-from forms import SignUpForm, LoginForm, PostForm, LikeForm, CommentForm
-from models import UserModel, SessionToken, PostModel, LikeModel, CommentModel
+from Demoapp.forms import SignUpForm, LoginForm, PostForm, LikeForm, CommentForm
+from Demoapp.models import UserModel, SessionToken, PostModel, LikeModel, CommentModel
 from django.http import HttpResponse
 from Django_Project.settings import BASE_DIR
 from datetime import timedelta
@@ -129,7 +129,7 @@ def like_view(request):
         return redirect('/login/')
 def comment_view(request):
     user = check_user(request)
-    if user and request.method == 'POST':
+    if user and request.method == 'GET':
         form = CommentForm(request.post)
         if form.is_valid():
             post_id = form.cleaned_data.get('post').id

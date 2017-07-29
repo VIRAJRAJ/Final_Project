@@ -77,19 +77,13 @@
 
 
 
-
-             
-
-
-
-
-
-                <!--footer starts-->
+                 <!--footer starts-->
 
                  <div class="row">
-		 <div class="col-sm-2 col-sm-offset-8">
+		 <div class="col-sm-4 col-sm-offset-4">
                
-                  <h2 id="p2"><p style="font-family:monotype corsiva;font-size:45px;">Instagram Clone</h2></p>
+			 <center><h2 id="p2"> <p style="font-family:monotype corsiva;font-size:45px;">Instagram Clone</p></h2>
+
                          <script>
                          setInterval(raj1, 05);
                          setInterval(raj2, 15);
@@ -116,36 +110,39 @@
                          {
                          document.getElementById("p2").style.color="Silver";
                          }
-                         </script>
+			 </script></center>
 
 
-			<h1><p style="font-family:Monotype Corsiva; color:#F50057; font-size:30px;">Sign up</p></h1>
-		        <form method="post">
+		        </div>
+		        </div>
+		
+ 
+
+			 <center> <h1><p style="font-family:Monotype Corsiva; color:#F50057; font-size:30px;">Sign up</p></h1>
+			<form method="post">
 		        {% csrf_token %}
 				<div>
-					<p style="font-family:Monotype Corsiva; color:#3F51B5; font-size:20px;"><label for="username">Username:</label>
+			                <p style="font-family:Monotype Corsiva; color:#3F51B5; font-size:20px;"><label for="username">Username:</label>
 					<input id="username" type="text" name="username" value="{{ username }}"></p>
 				</div>
 				<div>
-				<p style="font-family:Monotype Corsiva; color:#303F95; font-size:20px;"><label for="name">Name:</label>
+				        <p style="font-family:Monotype Corsiva; color:#303F95; font-size:20px;"><label for="name">Name:</label>
 					<input id="name" type="text" name="name" value="{{ name }}"></p>
 				</div>
 				<div>
-			 	<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"><label for="email">Email:</label>
+			        	<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"><label for="email">Email:</label>
 					<input id="email" type="text" name="email" value="{{ email }}"></p>
 				</div>
 				<div>
 					<p style="font-family:Monotype Corsiva; color:#7A1EA1; font-size:20px;"><label for="password">Password:</label>
 					<input id="password" maxlength="15" type="Password" name="password" value="{{ password }}"></p>
 				</div>
-				<p style="font-family:Monotype Corsiva; color:#691A99; font-size:21px;"><input type="submit" value="Login"></p>
+			        	<p style="font-family:Monotype Corsiva; color:#691A99; font-size:21px;"><input type="submit" value="Login"></p>
 				
-			 </form>
+			</form></center>
 
+                        
 
-		 </div>
-		 </div>
- 
 
 
                  <nav class="navbar navbar-default navbar-fixed-bottom">

@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from views import login_view, signup_view, feed_view, post_view, like_view, comment_view
-from django.conf.urls.static import static
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^login/', login_view),
