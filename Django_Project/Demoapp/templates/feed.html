@@ -1,6 +1,5 @@
 {% load staticfiles %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +11,18 @@
         {% csrf_token %}
         <input type="submit" class="btn-default btn" value="Create Post">
     </form>
+    <a href="categories/"><input type="submit" value="Search by category"></a>
+    <a href="search/"><input type="button" value="Search By User" ></a>
 
-
-
+    <h1 align="right"><a href="{% url 'logout' %}"> Log Out </a></h1>
 
     {% for post in posts %}
 
+
         <h3> Posted by: {{ post.user.username }} </h3>
         <p>[{{ post.created_on }}]</p>
-        <img style="display:inline-block; width:350px; height:300px;"
-             src="{{ post.image_url }}" /><br>
-        <span  style="display:inline-block;">{{ post.caption }}</span><br/><br/>
+        <img style="display:inline-block; width:350px; height:300px;" src="{{ post.image_url }}></br>
+        <span  style="display:inline-block">{{ post.caption }}</span><br/><br/>
         <div style="display:inline-block">
             {{ post.like_count }} likes this
         </div>
@@ -37,8 +37,12 @@
                 {% endif %}
             </form>
         </div>
-
-
+        <div>
+            <p> Categories: </p>
+            {% for category in post.categories %}
+            <span> {{ category.category_text }} </span>
+            {% endfor %}
+        </div>
         <div>
             <form method="POST" action="/comment/">
                 {% csrf_token %}
@@ -48,15 +52,26 @@
                 <input type="submit" class="btn-default btn" value="Comment">
             </form>
         </div>
-
-
-        <div>
+  <div>
             {% for comment in post.comments %}
                 <p><b>{{ comment.user.username }} [{{ comment.created_on }}]:</b> {{ comment.comment_text }}</p>
             {% endfor %}
         </div>
-
-
+     <div>
+            {% for comment in comments %}
+            <p> <b>{{ comment.user.username }} [{{ comment.created_on }}]:</b> {{ comment.comment_text }}</p>
+                {{ comment.upvote_count }} user upvoted this comment
+              <form method="POST" action="/upvote/">
+              {% csrf_token %}
+                <input type="hidden" name="comment" value="{{ comment.id }}" />
+                {% if comment.has_upvoted %}
+                <input type="submit" class="btn btn-default" value="Upvoted">
+                {% else %}
+                <input type="submit" class="btn btn-default" value="Upvote">
+                {% endif %}
+            </form>
+            {% endfor %}
+        </div>
     {% endfor %}
 </body>
 </html>

@@ -11,19 +11,19 @@ from Django_Project.settings import BASE_DIR
 from django.contrib.auth.hashers import make_password,check_password
 from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
-from clarifai import rest
-from clarifai.rest import ClarifaiApp
+#from clarifai import rest
+#from clarifai.rest import ClarifaiApp
 #using clarifai to categorizing Images According To Different Category
 import smtplib
 #smtplib is used to send email to a particular user who has performed certain actions(like post ,like etc)
-from constants import constant, CLARIFAI_API_KEY
+#from constants import constant, CLARIFAI_API_KEY
 #all contants are stored in it
 import ctypes
 import tkMessageBox
 from imgurpython import ImgurClient
 #(Imgur Saves THe IMage TO cloud)
-#client_id = '50b7d2b49057d21'
-#client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
+client_id = '50b7d2b49057d21'
+client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
 
 #(Clent id and client secret )
 
@@ -161,7 +161,7 @@ def check_validation(request):
 
 #(THIS IS THE MAIN OBJECTIVE FOR AUTO CATEGORISATION OF PRODUCTS WHERE USERS CAN UPLOAD THEIR PRODUCT)
 def add_category(post):
-    app = ClarifaiApp(api_key='bca96d1642af46ec8c6b9321f53f7cba')
+    app = ClarifaiApp(api_key='bb5b6eb589dd416290c366aff4bf6038')#bb5b6
 
     # Logo model
 
@@ -205,7 +205,7 @@ def post_view(request) :
                 post.save()
 
                 add_category(post)  #Calling Add category for which furture contact to clarifai
-                app = ClarifaiApp(api_key='bca96d1642af46ec8c6b9321f53f7cba')
+                app = ClarifaiApp(api_key='bb5b6eb589dd416290c366aff4bf6038')
                 model = app.models.get('general-v1.3')  # notify model which we are going to use from clarifai
                 response = model.predict_by_url(url=post.image_url)  # pass the url of current image
                 category = response["outputs"][0]["data"]["concepts"][0][
