@@ -1,31 +1,29 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render,redirect
-
-from datetime import datetime
 import os
-from Demoapp.forms import SignUpForm,LoginForm,PostForm,LikeForm,CommentForm,CategoryForm,SearchUserForm,UpvoteForm
-from Demoapp.models import UserModel,SessionToken,PostModel,LikeModel,CommentModel,CategoryModel,UpvoteModel
+from Demoapp.forms import SignUpForm, LoginForm, PostForm, LikeForm, CommentForm, CategoryForm, SearchUserForm, UpvoteForm
+from Demoapp.models import UserModel, SessionToken, PostModel, LikeModel, CommentModel, CategoryModel, UpvoteModel
 from datetime import timedelta
 from django.utils import timezone
+from datetime import datetime
 from Django_Project.settings import BASE_DIR
 from django.contrib.auth.hashers import make_password,check_password
 from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
-#from clarifai import rest
+from clarifai import rest
 from clarifai.rest import ClarifaiApp
 #using clarifai to categorizing Images According To Different Category
 import smtplib
 #smtplib is used to send email to a particular user who has performed certain actions(like post ,like etc)
-from constants import constant,CLARIFAI_API_KEY
+from constants import constant, CLARIFAI_API_KEY
 #all contants are stored in it
 import ctypes
 import tkMessageBox
-
 from imgurpython import ImgurClient
 #(Imgur Saves THe IMage TO cloud)
-client_id = '50b7d2b49057d21'
-client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
+#client_id = '50b7d2b49057d21'
+#client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
 
 #(Clent id and client secret )
 
@@ -57,13 +55,13 @@ def signup_view(request) :     #sigup here
 
 
                 #sending welcome Email To User That Have Signup Successfully
-                message = "Welcome!! To Creating Your Account At p2p marketplace Managed by vishav gupta.You Have " \
+                message = "Welcome!! To Creating Your Account At p2p marketplace Managed by vikas raj.You Have " \
                       "Successfully Registered.It is correct place for marketing Your product.We Are Happy To Get You" \
                       "as one of our member "
                 server = smtplib.SMTP('smtp.gmail.com',587)
                 server.starttls()
-                server.login('vishavgupta110@gmail.com',constant)
-                server.sendmail('vishavgupta110@gmail.com',email,message)
+                server.login('vikasrajuniversity@gmail.com',constant)
+                server.sendmail('vikasrajuniversity@gmail.com',email,message)
                 #   WOW!!!SUCCESSFULLY SEND EMAIL TO THE USER WHO HAS SIGNUP.USER CAN CHECK INBOX OR SPAM
                 # THIS IS ACCURATLY WORKING
                 ctypes.windll.user32.MessageBoxW(0, u"You have successfully signed up.",
@@ -163,7 +161,7 @@ def check_validation(request):
 
 #(THIS IS THE MAIN OBJECTIVE FOR AUTO CATEGORISATION OF PRODUCTS WHERE USERS CAN UPLOAD THEIR PRODUCT)
 def add_category(post):
-    app = ClarifaiApp(api_key=CLARIFAI_API_KEY)
+    app = ClarifaiApp(api_key='bca96d1642af46ec8c6b9321f53f7cba')
 
     # Logo model
 
@@ -202,12 +200,12 @@ def post_view(request) :
 
                 path = str(BASE_DIR +"//"+ post.image.url)
                 #Logic for cloud storage of image
-                client = ImgurClient(client_id,client_sec)
+                client = ImgurClient('50b7d2b49057d2', 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2')
                 post.image_url = client.upload_from_path(path, anon=True)['link']
                 post.save()
 
                 add_category(post)  #Calling Add category for which furture contact to clarifai
-                app = ClarifaiApp(api_key=CLARIFAI_API_KEY)
+                app = ClarifaiApp(api_key='bca96d1642af46ec8c6b9321f53f7cba')
                 model = app.models.get('general-v1.3')  # notify model which we are going to use from clarifai
                 response = model.predict_by_url(url=post.image_url)  # pass the url of current image
                 category = response["outputs"][0]["data"]["concepts"][0][
@@ -268,8 +266,8 @@ def like_view(request):
                 server.starttls()
                 to_email = like.post.user.email
                 message = "You have a new like on your post posted on instaclone.WEll done keep posting to get more popular"
-                server.login('vishavgupta110@gmail.com', constant)
-                server.sendmail('vishavgupta110@gmail.com', to_email, message)
+                server.login('vikasrajuniversity@gmail.com', constant)
+                server.sendmail('vikasrajuniversity@gmail.com', to_email, message)
 
             else:
                 existing_like.delete()
@@ -295,8 +293,8 @@ def comment_view(request):
                            "Thank You TEAM::ACADVIEW"
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
-            server.login('vishavgupta110@gmail.com', constant)
-            server.sendmail('vishavgupta110@gmail.com', to_mail, text_message)
+            server.login('vikasrajuniversity@gmail.com', constant)
+            server.sendmail('vikasrajuniversity.com', to_mail, text_message)
             return redirect('/feed/')
         else:
             return redirect('/feed/')
