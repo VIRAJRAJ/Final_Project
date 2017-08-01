@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from constants import constant
 #from views import signup_view
 from views import login_view, feed_view, post_view, like_view, comment_view, logout_view, category_view, search_view, upvote_view, signup_view
 
