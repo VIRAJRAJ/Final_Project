@@ -22,7 +22,8 @@
         <h3> Posted by: {{ post.user.username }} </h3>
         <p>[{{ post.created_on }}]</p>
         <img style="display:inline-block; width:350px; height:300px;" src="{{ post.image_url }}></br>
-        <span  style="display:inline-block">{{ post.caption }}</span><br/><br/>
+        <span  style="display:inline-block">
+        {{ post.caption }}</span><br/><br/>
         <div style="display:inline-block">
             {{ post.like_count }} likes this
         </div>

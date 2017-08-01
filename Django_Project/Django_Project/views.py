@@ -15,17 +15,20 @@ from django.contrib.auth import logout
 from clarifai.rest import ClarifaiApp
 #using clarifai to categorizing Images According To Different Category
 import smtplib
+#import email.utils
+
+#from email.mime.text import MIMEText
 #smtplib is used to send email to a particular user who has performed certain actions(like post ,like etc)
 from constants import constant, CLARIFAI_API_KEY
-from enum import Enum
+#from enum import Enum
 
 #all contants are stored in it
 import ctypes
 import tkMessageBox
 from imgurpython import ImgurClient
 #(Imgur Saves THe IMage TO cloud using Clent id and client secret)
-#client_id = '50b7d2b49057d21'
-#client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
+client_id = '50b7d2b49057d21'
+client_secret = 'bcfb26bd61078f458bc58d45ad80416c8dc0e6e2'
 
 
 
@@ -61,7 +64,7 @@ def signup_view(request) :     #sigup here
                 message = "Welcome!! To Creating Your Account At p2p marketplace Managed by vikas raj.You Have " \
                       "Successfully Registered.It is correct place for marketing Your product.We Are Happy To Get You" \
                       "as one of our member "
-                server = smtplib.SMTP('smtp.gmail.com',587)
+                server = smtplib.SMTP('smtp.gmail.com',587) #port 465 or 587
                 server.starttls()
                 server.login('vikasrajuniversity@gmail.com',constant)
                 server.sendmail('vikasrajuniversity@gmail.com',email,message)
@@ -161,7 +164,7 @@ def check_validation(request):
 
 # The add_category funcrion is created to categories images seprately
 def add_category(post):
-    app = ClarifaiApp(api_key='{bca96d1642af46ec8c6b9321f53f7cba}')#bb5b6
+    app = ClarifaiApp(api_key=CLARIFAI_API_KEY)
 
     # Logo model
 
@@ -205,7 +208,7 @@ def post_view(request) :
                 post.save()
 
                 add_category(post)  #Calling Add category for which furture contact to clarifai
-                app = ClarifaiApp(api_key='{bca96d1642af46ec8c6b9321f53f7cba}')
+                app = ClarifaiApp(api_key=CLARIFAI_API_KEY)
                 model = app.models.get('general-v1.3')  # notify model which we are going to use from clarifai
                 response = model.predict_by_url(url=post.image_url)  # pass the url of current image
                 category = response["outputs"][0]["data"]["concepts"][0][
@@ -238,14 +241,14 @@ def search_view(request):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             posts = PostModel.objects.filter(user__username=username)
-            return render(request, 'feed.html', {'posts': posts})
+            return render(request, 'feeds.html', {'posts': posts})
     return redirect('/login/')
 
 
 
 def search_user_view(request,username):
     posts = PostModel.objects.filter(user__username=username)
-    return render(request, 'feed.html', {'posts': posts})
+    return render(request, 'feeds.html', {'posts': posts})
 
 
 
@@ -313,7 +316,7 @@ def category_view(request):
         if form.is_valid():
             category = form.cleaned_data.get('category')
             posts = PostModel.objects.filter(category=category) #select only those post which have same category as selected by user
-            return render(request, 'feed.html', {'posts': posts})
+            return render(request, 'feeds.html', {'posts': posts})
         else:
             return redirect('/feed/')
 
