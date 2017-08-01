@@ -4,15 +4,9 @@
     <list default="true" id="7bf0788c-77a1-4321-b6d1-1633f092696d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/db.sqlite3" afterPath="$PROJECT_DIR$/Django_Project/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/forms.py" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/models.py" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/templates/categiries.html" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/templates/categiries.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/templates/feed.html" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/templates/feed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/templates/login.html" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/templates/post.html" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/templates/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/templates/search.html" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/templates/search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Demoapp/templates/signup.html" afterPath="$PROJECT_DIR$/Django_Project/Demoapp/templates/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Django_Project/Django_Project/views.py" afterPath="$PROJECT_DIR$/Django_Project/Django_Project/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,10 +21,20 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            <state relative-caret-position="169">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#648#680#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,8 +43,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -48,14 +52,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/forms.py">
+      <file leaf-file-name="Django_Project" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/Django_Project">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constants.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,8 +75,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -115,10 +127,11 @@
         <option value="$PROJECT_DIR$/Django_Project/Demoapp/templates/feed.html" />
         <option value="$PROJECT_DIR$/Django_Project/Demoapp/templates/search.html" />
         <option value="$PROJECT_DIR$/Django_Project/Demoapp/models.py" />
-        <option value="$PROJECT_DIR$/Django_Project/Django_Project/urls.py" />
         <option value="$PROJECT_DIR$/Django_Project/Demoapp/templates/categiries.html" />
-        <option value="$PROJECT_DIR$/Django_Project/Demoapp/templates/post.html" />
         <option value="$PROJECT_DIR$/Django_Project/Demoapp/forms.py" />
+        <option value="$PROJECT_DIR$/Django_Project/Demoapp/templates/post.html" />
+        <option value="$PROJECT_DIR$/Django_Project/Django_Project/urls.py" />
+        <option value="$PROJECT_DIR$/Django_Project/Django_Project/constants.py" />
         <option value="$PROJECT_DIR$/Django_Project/Django_Project/views.py" />
       </list>
     </option>
@@ -126,7 +139,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -166,6 +179,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,8 +313,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -484,10 +497,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.100605145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20106222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -537,57 +550,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp1/static/css/Styles.css" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp1/migrations/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp1/tests.py" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp1/templates/signup.html" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/Django_Project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/static/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp1/templates/login.html" />
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/Django_Project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -618,20 +585,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Demoapps/models.py" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/user_images/dark-forest-road-hedges-northern-ireland-manipulation-fantasy-surreal-52894392.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -652,13 +605,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/login_fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5chars.ent">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -668,95 +614,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Demoapps1/views.py" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Demoapps1/models.py" />
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/response.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3774">
-          <caret line="222" column="37" lean-forward="true" selection-start-line="222" selection-start-column="37" selection-end-line="222" selection-end-column="37" />
-          <folding>
-            <marker date="1501478936974" expanded="true" signature="1839:2947" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="2972:8608" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3018:6610" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3081:6586" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3139:6580" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3180:3783" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3269:3692" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3862:6573" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3924:5161" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3984:4053" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="3996:4048" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="4188:5118" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="4284:4399" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="4462:5072" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="5236:5580" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="5297:5438" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="5657:6553" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="5791:6511" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="6046:6469" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="6722:8597" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="6759:8580" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="6789:6940" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="6970:8549" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7009:8504" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7056:8497" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7080:7124" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7214:7274" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7301:7558" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7319:7552" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7331:7391" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7392:7543" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7547:7552" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7568:7808" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7586:7797" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7598:7658" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7659:7792" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7698:7704" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7704:7710" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7710:7716" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7716:7722" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7722:7728" ph=" " />
-            <marker date="1501478936974" expanded="true" signature="7818:8062" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7836:8056" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7848:7908" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="7909:8047" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="7950:7956" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7956:7962" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7962:7968" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7968:7974" ph=" " />
-            <marker date="1501478936974" expanded="false" signature="7974:7980" ph=" " />
-            <marker date="1501478936974" expanded="true" signature="8051:8056" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8072:8341" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8097:8330" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="8109:8169" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8170:8325" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="8369:8429" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8648:9753" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8720:9539" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8759:9530" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8797:9486" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8859:9265" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="8893:9253" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="9359:9441" ph="..." />
-            <marker date="1501478936974" expanded="true" signature="9389:9429" ph="..." />
-            <marker date="1501478936974" expanded="false" signature="9398:9404" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -764,39 +622,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/categiries.html">
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/post.html">
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/feed.html">
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/migrations/0005_auto_20170731_0802.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="268">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -808,28 +651,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/settings.py">
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/response.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/urls.py">
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="e#648#680#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/login_fail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/categiries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/feed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/Django_Project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -838,18 +769,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/views.py">
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Demoapp/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <caret line="262" column="0" lean-forward="true" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+          <folding>
+            <marker date="1501524701415" expanded="true" signature="8648:9702" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/Django_Project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Project/Django_Project/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
