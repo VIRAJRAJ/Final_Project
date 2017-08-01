@@ -42,6 +42,7 @@
 
 	       <style>
 body{
+
 background-repeat: no-repeat;
 background-position: 50 50;
 }
@@ -49,10 +50,10 @@ background-position: 50 50;
 
 <script >
 var imgs=new Array()
-imgs[0]="https://tse4.mm.bing.net/th?id=OIP.V6t55wDDJnO22rvDx9BU1QEsC7&pid=15.1&P=0&w=255&h=160";
-imgs[1]="https://s-media-cache-ak0.pinimg.com/originals/ee/5e/a4/ee5ea4f918db263a72c01128987d88f0.jpg";
-imgs[2]="https://c1.staticflickr.com/5/4236/35425911280_5731ec2fe4_n.jpg";
-imgs[3]="https://c1.staticflickr.com/5/4263/34795041464_03462710fc_n.jpg";
+imgs[0]="http://www.guidetopc.com/wp-content/uploads/2017/04/Oppo-F3.jpeg";
+imgs[1]="http://www.gadgetguy.com.au/cms/wp-content/uploads/2017/03/Oppo-R9s-Plus-1-1200x762_c.jpg";
+imgs[2]="http://s3.amazonaws.com/digitaltrends-uploads-prod/2013/09/Oppo-N1-hands-on-camera-back-macro.jpg";
+imgs[3]="https://db5hnvpcdhbsn.cloudfront.net/dimg/1200x1200/dimg/phones_1.jpg";
 var speed=2000
 var processed=new Array()
 for (i=0;i<imgs.length;i++){
@@ -112,7 +113,7 @@ window.onload=new Function('setInterval("slideimg()",speed)');
 	<body>	
 		<!--header-->
                     <header>
-                           <nav class="navbar navbar-default">
+                           <nav class="navbar navbar-inverse">
                                   <div class="container">
 			          <div class="navbar-header">
                                   <button type="button" class="navbar-toggle collapsed" 
@@ -192,7 +193,7 @@ window.onload=new Function('setInterval("slideimg()",speed)');
 			<form class="div" method="post">
 		        {% csrf_token %}
 			        <center><h1 id="p2"> <p style="font-family:Monotype Corsiva;font-size:48px;">Instagram Clone</p></h1>
-                                        <h1 id="p2" ><p style="font-family:Monotype Corsiva; color:#F50057; font-size:30px;">Sign up</p></h1>
+                                        <h1 id="p2" ><p style="font-family:Monotype Corsiva; color:#008975; font-size:30px;">Sign up</p></h1>
 				<div>
 					<h1 id="p2"> <p style="font-family:Monotype Corsiva; color:#3F51B5; font-size:20px;"><label for="username">Username:</label>
 						<input id="username" type="text" maxlength="12" minlength="4" name="username" value="{{ username }}"></p><h1>
@@ -209,7 +210,7 @@ window.onload=new Function('setInterval("slideimg()",speed)');
 				        <h1 id="p2"> <p style="font-family:Monotype Corsiva; color:#7A1EA1; font-size:20px;"><label for="password">Password:</label>
 						<input id="password" maxlength="12" minlength="5" type="Password" name="password" value="{{ password }}"></p></h1>
 				</div>
-				<h1 id="p2"><p style="font-family:Monotype Corsiva; color:#691A99; font-size:21px;"><b><input id="p2"type="submit" value="Submit"><b></p></h1>
+			               	<b><input class= "demo1"type="submit" value="Submit"><b></p>
 				
 			</form>
 	                </center>
@@ -221,7 +222,7 @@ window.onload=new Function('setInterval("slideimg()",speed)');
 	</body>
 
                  <!--Footer Starts-->
-                 <nav class="navbar navbar-default navbar-fixed-bottom">
+                 <nav class="navbar navbar-inverse navbar-fixed-bottom">
 		       <div class="container-fluid">
 				<!--row3-->
 				<div class="row">

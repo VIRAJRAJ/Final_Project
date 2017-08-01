@@ -13,6 +13,74 @@
 
 
 		
+    <style>
+                    .div
+		    {
+                            width: 425px;
+			    height: auto;
+		            padding: 25px;
+			    border: 5px solid #999;
+			    text-align: justify;
+			    position: absolute;
+			    top: 20px;
+			    right: 35px;
+			    box-shadow: 5px 6px 10px #333;
+		            border-radius: 20px 20px 20px 20px;
+		    } 
+		    .demo1
+		    {
+			    background-color:red;
+			    }
+		    #id1{
+                            height: 40px;
+			    margin-left: 10px;
+			    background-color; red;
+			    color:rgb(255.255.255);
+			   
+			}
+		   
+		    </style>
+
+
+	       <style>
+body{
+
+background-repeat: no-repeat;
+background-position: 50 50;
+}
+</style>
+
+<script >
+var imgs=new Array()
+imgs[0]="http://s7d2.scene7.com/is/image/SamsungUS/Learn_color_DSKTP_01?$cm-g-fb-full-bleed-img-jpg$";
+imgs[1]="http://s3.amazonaws.com/digitaltrends-uploads-prod/2013/09/Oppo-N1-hands-on-camera-back-macro.jpg";
+imgs[2]="http://s7d2.scene7.com/is/image/SamsungUS/001_fullscreen_learn_1440x799?$cm-g-fb-full-bleed-img-jpg$";
+var speed=2000
+var processed=new Array()
+for (i=0;i<imgs.length;i++){
+processed[i]=new Image();
+processed[i].src=imgs[i];
+}
+var inc=-1;
+function slideimg(){
+if (inc<imgs.length-1)
+inc++;
+else
+inc=0;
+document.body.background=processed[inc].src;
+}
+if (document.all||document.getElementById)
+window.onload=new Function('setInterval("slideimg()",speed)');
+</script>
+
+
+	
+
+
+
+
+
+
 
 
 
@@ -22,7 +90,7 @@
 	<body>	
 		<!--header-->
         	      <header>
-                           <nav class="navbar navbar-default">
+                           <nav class="navbar navbar-inverse">
                                   <div class="container">
 			          <div class="navbar-header">
                                   	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"aria-expanded="false">
@@ -76,13 +144,7 @@
 		</header>
 		<!--/header-->
 
-<div align="center">
-   <object class="embed-responsive-item">
-     <video autoplay loop >
-       <source src="C:\Users\Vikas\Downloads\Alert - 3d Animation 1 Minute Video - YouTube (240p).flv" />
-     </video>
-   </object>
- </div>
+
 
 
 
@@ -137,12 +199,13 @@
                         <div class="row">
             		<div class="col-sm-4 col-sm-offset-4">
 	               
+				
+			<form class="div"method="post">
+			{% csrf_token %}
 		        <center> <h2 id="p2"><p style="font-family:monotype corsiva;font-size:45px;">Instagram Clone</h2></p></center>
 
 			<center> <h1><p style="font-family:Monotype Corsiva; color:pink; font-size:35px;">Login</p></h1>
 	      
-			<form method="post">
-			{% csrf_token %}
 				<div>
 					<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"><label for="username">Username:</label>
 					<input id="username" type="text" name="username" value="">
@@ -153,7 +216,7 @@
 				</div>
 				<div>
 					<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"><input type="submit" value="Login" class="btn btn-success">
-			         	<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"> <h3>Already a user?</h3><a href="login/">Login</a></div>
+					<p style="font-family:Monotype Corsiva; color:#3E50B4; font-size:20px;"> <h3>Already a user?</h3><b /><a href="login/">Login</a></div>
 		                        </b> </center>
 				</div>
                                     
@@ -171,7 +234,7 @@
 			
 			
 			
-	<nav class="navbar navbar-default navbar-fixed-bottom">
+	<nav class="navbar navbar-inverse navbar-fixed-bottom">
 			<div class="container-fluid">
 				<!--row3-->
 				<div class="row">
