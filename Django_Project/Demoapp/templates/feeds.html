@@ -24,7 +24,7 @@
         <div style="display:inline-block">
             {{ post.like_count }} likes this
         </div>
-        <div style="display:inline-block">
+        
             <form method="POST" action="/like/">
               {% csrf_token %}
               <input type="hidden" name="post" value="{{ post.id }}" />
