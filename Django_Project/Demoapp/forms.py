@@ -1,5 +1,5 @@
 from django import forms
-from models import UserModel,SessionToken,PostModel,LikeModel,CommentModel,UpvoteModel
+from models import UserModel,SessionToken,PostModel,LikeModel,CommentModel
 
 
 class SignUpForm(forms.ModelForm) :
@@ -31,20 +31,7 @@ class CommentForm(forms.ModelForm) :
         model = CommentModel
         fields = ['comment_text' , 'post' ]
 
-class SearchUserForm(forms.ModelForm) :
-    class Meta :
-        model = UserModel
-        fields = ['username']
 
-class CategoryForm(forms.ModelForm) :
-    class Meta :
-        model = PostModel
-        fields = ['category']
-
-class UpvoteForm(forms.ModelForm) :
-    class Meta :
-        model = UpvoteModel
-        fields = ['comment']
 
 
 
