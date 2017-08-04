@@ -21,18 +21,14 @@ class SessionToken(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     is_valid = models.BooleanField(default=True)
 
-    # Following Method Is Use For Generating A Unique Session Token and Called In views.py File
+
     def create_token(self):
         self.session_token = uuid.uuid4()
-
-
-# Post Model Is Used To Define A Structure While Posting An Image With Suitable Caption
 class PostModel(models.Model):
     user = models.ForeignKey(UserModel)
     image = models.FileField(upload_to='user_images')
     image_url = models.CharField(max_length=255)
     caption = models.CharField(max_length=240)
-    category = models.CharField(max_length=270,blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     has_liked = False
@@ -45,11 +41,7 @@ class PostModel(models.Model):
     def comments(self):
         return CommentModel.objects.filter(post=self).order_by('-created_on')
 
-    @property
 
-    def categories(self):
-
-        return CategoryModel.objects.filter(post=self)
 
 
 class LikeModel(models.Model):
@@ -63,26 +55,6 @@ class CommentModel(models.Model):
     user = models.ForeignKey(UserModel)
     post = models.ForeignKey(PostModel)
     comment_text = models.CharField(max_length=555)
-    created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
-
-    @property
-    def upvote_count(self):
-        return len(UpvoteModel.objects.filter(comment=self))
-
-
-
-# Model to sort tags using Clarifai.
-
-
-
-class CategoryModel(models.Model):
-    post = models.ForeignKey(PostModel)
-    category_text = models.CharField(max_length=200)
-
-class UpvoteModel(models.Model):
-    user = models.ForeignKey(UserModel)
-    comment = models.ForeignKey(CommentModel)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
